@@ -1,0 +1,125 @@
+header {
+    padding: 0px 50px;
+    background: $bg-color;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid #101013;
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 50px;
+        flex-wrap: wrap;
+        height: 150px;
+
+        .mobile-menu {
+            display: none;
+
+            div {
+                width: 32px;
+                height: 1px;
+                background-color: #fff;
+                margin: 8px;
+                transition: .4s;
+            }
+        }
+    }
+
+    img {
+        width: 170px;
+        @include img-animate();
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+
+        li {
+            margin-left: 71px;
+
+            a {
+                color: $text-prymary-color;
+                position: relative;
+
+                font: {
+                    size: 1.8rem;
+                }
+
+                @include hover-link();
+
+                &:hover {
+                    color: white;
+                }
+            }
+
+
+
+
+        }
+    }
+
+
+
+
+    
+
+
+
+}
+
+
+
+@media screen and (max-width: $medium) {
+    body {
+        overflow-x: hidden
+    }
+
+    header {
+        padding: 0px 24px;
+
+        nav {
+            .mobile-menu  {
+                display: block;
+            }
+        }
+
+        .nav-list {
+            text-align: center;
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 999;
+            background-color: #09090b;
+            flex-direction: column;
+            padding-top: 96px;
+            visibility: hidden;
+
+            display: none;
+
+            li {
+                margin-left: 0px;
+                opacity: 0;
+                margin-bottom: 48px;
+
+                a {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        img {
+            width: 90px;
+        }
+
+
+    }
+
+}
