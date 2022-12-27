@@ -1,5 +1,6 @@
 #s-about {
     @include spacing-section; 
+    min-height: 90vh;
     .grid-layout {
         #about {
             @include flexbox-between; 
@@ -53,7 +54,7 @@
                 height: 25vh;
                 max-width: 600px;
                 
-                h1{@include title;}
+                h{@include title;}
                 p {
                     color: white; 
                     text-align: center;

@@ -64,12 +64,19 @@ $text-prymary-color: #D11AFF;
 }
 
 
+@mixin flexbox-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
 
 
 @mixin spacing-section() {
   padding: $gap-7 $gap-5;
   @include responsive-tablet {
-    padding: $gap-5 $gap-3;
+    padding: $gap-5 $gap-5;
   }
 }
 
