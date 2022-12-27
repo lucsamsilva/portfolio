@@ -1,1 +1,19 @@
-@import 'reset', 'variables', 'header', 'home';
+@import 'reset', 'variables', 'header', 'home', 'about';
+
+
+
+// Scrollbar styles
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+    
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: $bg-color;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #8A3FFC;    /* color of the scroll thumb */
+    border-radius: 30px;       /* roundness of the scroll thumb */
+    border: 4px solid #8A3FFC;  /* creates padding around scroll thumb */
+  }

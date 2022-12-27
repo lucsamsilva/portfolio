@@ -1,0 +1,68 @@
+#s-about {
+    @include spacing-section; 
+    .grid-layout {
+        #about {
+            @include flexbox-between; 
+            max-width: 90vw;
+            
+            @include responsive-tablet {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+
+            section {
+                width: 500px;
+                height: 500px;
+
+                .blob {
+                   svg {
+                    width: 700px;
+                    right: 124px;
+                    position: relative;
+
+                    
+                   }
+                }
+
+                .blob-img {
+                    bottom: 280px;
+                    left: 200px;
+                    position: relative;
+                    @include responsive-tablet {
+                        left: 151px;
+                    }
+
+
+                    img {
+                        border-radius: 10px;
+                    }
+
+                }
+
+
+            }
+
+            #about-text {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap; 
+               
+                height: 25vh;
+                max-width: 600px;
+                
+                h1{@include title;}
+                p {
+                    color: white; 
+                    text-align: center;
+                    margin-top: 60px;
+                    font: {
+                        size: 1.7rem; 
+                    }
+                }
+            }
+        } 
+    }
+}
