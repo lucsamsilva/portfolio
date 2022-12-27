@@ -66,3 +66,22 @@ $text-prymary-color: #D11AFF;
     @content;
   }
 }
+
+@mixin piscar {
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: piscar .7s infinite;
+
+  @keyframes piscar {
+
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+    
+  }
+}

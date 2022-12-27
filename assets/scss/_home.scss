@@ -25,7 +25,7 @@
                 padding: 0px;
             }
 
-            .typewrite {
+            .home-text {
                 color: #fff;
                 font-size: 2rem;
                 max-width: 600px;
@@ -35,6 +35,23 @@
     
                 span { 
                     color: $text-prymary-color; 
+                }
+            }
+
+            .home-text-type {
+                color: $text-prymary-color; 
+                font-size: 1.7rem;
+                max-width: 600px;
+                margin: 40px 0px;
+                font-weight: 400;
+                line-height: 140%;
+
+                
+            }
+
+            .typewrite {
+                &:after {
+                    @include piscar
                 }
             }
 
