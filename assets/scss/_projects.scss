@@ -6,6 +6,22 @@
     .grid-layout {
         
         h2{@include title; margin-top: 40px; }
+
+        h3{
+            a{
+                position: relative;  
+                transition: 0.5s;
+                color: $text-prymary-color; 
+                font: {
+                    size: 1.5rem; 
+                }
+
+                @include hover-link();
+                &:hover {
+                    color: white;
+                }
+            }
+        }
     }
 
     #projects {
@@ -26,37 +42,90 @@
             padding: $gap-4;
             margin-top: 5vh;
             background-color: #D119FF;
+            border-radius: 15px;
 
             @include responsive-tablet {
                 margin-bottom: 40px;
             }
 
             h3 {
-                color: rgb(63, 2, 66); 
-                padding: 0px 0px  $gap-2 0px ;
+                color: #0A0016; 
+                padding: 0px 0px  $gap-1 0px ;
+                border-bottom: 1px solid #0A0016;
                 font: {
-                    size: 1.9rem;
+                    size: 2rem;
                 }
 
             }
 
             p {
-                
+                color: white;
+                height: 15vh;
                 margin-top: 25px;
                 margin-bottom: 55px;
                 text-align: justify;
                 font: {
-                    size: 1.7rem;
+                    size: 1.4rem;
+                }
+
+
+                span {
+                    color: $bg-color; 
+                    font-weight: bolder;
                 }
 
             }
 
 
             a {
-                padding: 10px 35px;
+                color: #0A0016;
+                padding: 10px 30px;
+                position: relative;
                 margin: 10px;
-                border: 1px solid black;
+                letter-spacing: 0.1em;
+                font-weight: 700;
+                border-radius: .2em;
+                text-transform: uppercase;
+                border: 2px solid #0A0016;
+
+                transition: 0.5s;
+
+
+
+                &:hover {
+                    color: white;
+                    background-color: #a202ca;
+                    letter-spacing: 0.15em;
+                    box-shadow: 0 0 15px #a202ca;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        inset: 2px;
+                       
+                        background: #0A0016;
+    
+                         
+                        
+                    }
+
+                }
+
+                
+
+                    
+                span {
+                    position: relative;
+                    z-index: 1;
+                }
+
+
+
+
+                
             }
+
+            
             
 
 

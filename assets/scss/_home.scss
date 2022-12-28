@@ -58,23 +58,48 @@
 
             
             a {
-                background: #C24DDF;
                 color: white;
-                backdrop-filter: blur(10px);
+                background:  #0A0016;
                 padding: 20px 32px;
                 max-width: 250px;
+                text-transform: uppercase;
+                backdrop-filter: blur(10px);
+                border: 2px solid #C24DDF;
+                border-radius: .2em;
+
+                
                 @include flexbox-center;
+                position: relative;
+
                 transition: all 0.4s ease;
                 margin-top: 30px;
                 font: {
                     size: 18px;
-                    weight: 500;
+                    weight: 700;
                 }
 
                 &:hover {
-                    padding: 20px 45px;
-                    max-width: 270px;
+                    color: white;
+                    background-color: #a202ca;
+                    letter-spacing: 0.15em;
+                    box-shadow: 0 0 15px #a202ca;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        inset: 2px;
+                       
+                        background: #C24DDF;
+                        
+                    }
+
                 }
+
+                span {
+                    position: relative;
+                    z-index: 1;
+                }
+
             }
           
         }
