@@ -1,0 +1,64 @@
+#s-skills {
+    @include spacing-section;
+    min-height: 80vh;
+   
+
+
+
+
+    .grid-layout {
+        @include flexbox-around;
+        align-items: flex-start;
+
+        @include responsive-tablet {
+            @include flexbox-center;
+        
+            margin-top: 65vh;
+
+
+        }
+
+
+        .skills-title {
+            margin: 20vh;
+
+            h2 {@include title;}
+            h3 {
+                position: relative;
+                top: 60px;
+                color: white; 
+
+                font: {
+                    size: 1.5rem; 
+                }
+            }
+
+        }
+
+
+        #skills {
+            @include flexbox-evenly;
+            flex-wrap: wrap; 
+            max-width: 700px;
+
+           
+            .item {
+                
+                width: 165px;
+                height: 200px;
+                border-radius: 5px;
+
+                margin: 25px;
+
+                background-color: #D119FF;
+
+            }
+           
+            
+        }
+      
+
+    }
+
+   
+}

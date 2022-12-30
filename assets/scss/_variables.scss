@@ -1,5 +1,5 @@
 // Mobile
-$small: 300px;
+$small: 420px;
 $medium: 992px;
 
 $gap-0: 0px;
@@ -71,6 +71,14 @@ $text-prymary-color: #D11AFF;
 }
 
 
+@mixin flexbox-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
 
 
 @mixin spacing-section() {
@@ -96,7 +104,7 @@ $text-prymary-color: #D11AFF;
 }
 
 @mixin responsive-mobile {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small) {
     @content;
   }
 }

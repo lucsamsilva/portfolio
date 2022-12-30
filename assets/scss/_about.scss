@@ -1,6 +1,8 @@
 #s-about {
     @include spacing-section; 
+    @include flexbox-center;
     min-height: 90vh;
+
     .grid-layout {
         #about {
             @include flexbox-between; 

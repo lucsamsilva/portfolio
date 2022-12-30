@@ -2,6 +2,7 @@
     @include spacing-section;
     min-height: 20vh;  
     text-align: center;
+    position: relative; 
 
     .grid-layout {
         
@@ -25,9 +26,10 @@
     }
 
     #projects {
+        @include flexbox-around;
         padding: $gap-2;
         margin: $gap-3 0px;
-        @include flexbox-around;
+        
         flex-wrap: wrap;
         text-align: left;
         height: 90vh; 
@@ -40,7 +42,7 @@
 
             max-width: 400px;
             padding: $gap-4;
-            margin-top: 5vh;
+            margin: 2vh;
             background-color: #D119FF;
             border-radius: 15px;
 

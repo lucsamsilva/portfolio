@@ -1,4 +1,4 @@
-@import 'reset', 'variables', 'header', 'home', 'about', 'projects';
+@import 'reset', 'variables', 'header', 'home', 'about', 'projects', 'skills';
 
 
 
@@ -17,4 +17,44 @@ body::-webkit-scrollbar {
     background-color: #8A3FFC;    /* color of the scroll thumb */
     border-radius: 30px;       /* roundness of the scroll thumb */
     border: 4px solid #8A3FFC;  /* creates padding around scroll thumb */
+  }
+
+  body, html{
+    height: 100vh;
+  }
+
+  body {
+    @include responsive-mobile {
+      .mobile {
+        display: flex !important;
+      }
+
+      header{display: none;}
+      main{display: none;}
+    }
+
+    .mobile {
+      @include flexbox-center;
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 60px;
+      background-color: $bg-color;
+
+      z-index: 999;
+
+      h1 {
+        @include title;
+        font: {
+          size: 1.5rem; 
+        }
+        color: $text-prymary-color;
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
