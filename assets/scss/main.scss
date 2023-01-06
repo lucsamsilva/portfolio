@@ -24,35 +24,6 @@ body::-webkit-scrollbar {
     height: 100vh;
   }
 
-  body {
-    @include responsive-mobile {
-      .mobile {
-        display: flex !important;
-      }
-
-      header{display: none;}
-      main{display: none;}
-    }
-
-    .mobile {
-      @include flexbox-center;
-      display: none;
-      width: 100%;
-      height: 100%;
-      padding: 60px;
-      background-color: $bg-color;
-
-      z-index: 999;
-
-      h1 {
-        @include title;
-        font: {
-          size: 1.5rem; 
-        }
-        color: $text-prymary-color;
-      }
-    }
-  }
 
   main {
     display: flex;

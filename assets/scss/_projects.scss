@@ -40,7 +40,8 @@
             @include flexbox-center;
             flex-direction: column;
 
-            max-width: 400px;
+            width: 400px;
+            height: 453px;
             padding: $gap-4;
             margin: 2vh;
             background-color: #D119FF;
@@ -49,7 +50,7 @@
             @include responsive-tablet {
                 margin-bottom: 40px;
             }
-
+            
             h3 {
                 color: #0A0016; 
                 padding: 0px 0px  $gap-1 0px ;

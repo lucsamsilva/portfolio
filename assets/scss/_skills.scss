@@ -1,17 +1,17 @@
 #s-skills {
     @include spacing-section;
-    min-height: 80vh;
-   
+    height: 80vh;
+
 
 
 
 
     .grid-layout {
-        @include flexbox-around;
+        @include flexbox-between;
 
         @include responsive-tablet {
             @include flexbox-center;
-        
+
             margin-top: 65vh;
 
 
@@ -19,16 +19,23 @@
 
 
         .skills-title {
-            margin: 20vh;
 
-            h2 {@include title;}
+            margin: 15vh;
+
+            h2 {
+                @include title;
+            }
+
             h3 {
+                text-transform: uppercase;
+                width: 600px;
+                height: 150px;
                 position: relative;
                 top: 60px;
-                color: white; 
+                color: white;
 
                 font: {
-                    size: 1.5rem; 
+                    size: 1.5rem;
                 }
             }
 
@@ -37,24 +44,24 @@
 
         #skills {
             @include flexbox-evenly;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
+            position: static;
             max-width: 700px;
 
-           
-            .item {
-               @include flexbox-center;
 
-                
-                width: 165px;
-                height: 200px;
+            .item {
+                @include flexbox-center;
+
+                width: 150px;
+                height: 170px;
                 border-radius: 5px;
 
-                margin: 25px;
+                margin: 10px;
 
                 background-color: #D119FF;
                 transition: .5s;
 
-                &:hover { 
+                &:hover {
                     cursor: pointer;
                     border: 5px solid rgba(255, 255, 255, 0.43);
                 }
@@ -67,12 +74,12 @@
 
 
             }
-           
-            
+
+
         }
-      
+
 
     }
 
-   
+
 }
