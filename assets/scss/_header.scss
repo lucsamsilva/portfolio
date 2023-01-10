@@ -4,18 +4,17 @@ header {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid #101013;
-    z-index: 999;
-    width: 100%;
     position: fixed;
+    width: 100%;
+    z-index: 999;
     top: 0;
     left: 0;
 
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px 50px;
+        @include flexbox-between;
         flex-wrap: wrap;
+        padding: 0px 50px;
+        width: 100%;
         height: 100px;
 
         .mobile-menu {
@@ -67,7 +66,7 @@ header {
 
 
 
-    
+
 
 
 
@@ -84,7 +83,7 @@ header {
         padding: 0px 24px;
 
         nav {
-            .mobile-menu  {
+            .mobile-menu {
                 display: block;
             }
         }

@@ -1,40 +1,47 @@
 #s-projects {
     @include spacing-section;
-    min-height: 20vh;  
-    text-align: center;
-    position: relative; 
+    height: 750px;
+
+    @include responsive-tablet {
+        height: 200vh;
+    }
+
 
     .grid-layout {
-        
-        h2{@include title; margin-top: 40px; }
+        @include flexbox-center;
+        flex-direction: column;
 
-        h3{
-            a{
-                position: relative;  
-                transition: 0.5s;
-                color: $text-prymary-color; 
-                font: {
-                    size: 1.5rem; 
-                }
-
-                @include hover-link();
-                &:hover {
-                    color: white;
-                }
-            }
+        h2 {
+            @include title;
+            margin-top: 40px;
         }
+
+
+
     }
 
     #projects {
-        @include flexbox-around;
+        @include flexbox-center;
+        flex-wrap: wrap;
+
         padding: $gap-2;
         margin: $gap-3 0px;
-        
-        flex-wrap: wrap;
-        text-align: left;
-        height: 90vh; 
+        margin-top: 5vh;
 
-        // max-width: ;
+        text-align: left;
+
+
+        @include responsive-tablet {
+            @include flexbox-evenly;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+
+
+
+
+
 
         .intervalcard {
             @include flexbox-center;
@@ -50,14 +57,17 @@
             @include responsive-tablet {
                 margin-bottom: 40px;
             }
-            
+
             h3 {
-                color: #0A0016; 
-                padding: 0px 0px  $gap-1 0px ;
+                color: #0A0016;
+                padding: 0px 0px $gap-1 0px;
                 border-bottom: 1px solid #0A0016;
+
                 font: {
                     size: 2rem;
                 }
+
+
 
             }
 
@@ -67,13 +77,14 @@
                 margin-top: 25px;
                 margin-bottom: 55px;
                 text-align: justify;
+
                 font: {
                     size: 1.4rem;
                 }
 
 
                 span {
-                    color: $bg-color; 
+                    color: $bg-color;
                     font-weight: bolder;
                 }
 
@@ -105,18 +116,18 @@
                         content: '';
                         position: absolute;
                         inset: 2px;
-                       
+
                         background: #0A0016;
-    
-                         
-                        
+
+
+
                     }
 
                 }
 
-                
 
-                    
+
+
                 span {
                     position: relative;
                     z-index: 1;
@@ -125,17 +136,50 @@
 
 
 
-                
+
             }
 
-            
-            
+
+
 
 
         }
 
 
-      
-        
+
+
+    }
+}
+
+
+
+.r-link {
+    @include spacing-section;
+    @include flexbox-center;
+
+    height: auto;
+
+    h3 {
+
+        position: relative;
+        top: 35px; 
+
+        a {
+            @include hover-link();
+
+
+            transition: 0.5s;
+            color: $text-prymary-color;
+
+            font: {
+                size: 1.5rem;
+            }
+
+            @include hover-link();
+
+            &:hover {
+                color: white;
+            }
+        }
     }
 }

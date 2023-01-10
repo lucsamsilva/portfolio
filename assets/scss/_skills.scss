@@ -1,15 +1,12 @@
 #s-skills {
     @include spacing-section;
-    height: 25vh;
+    height: 400px;
 
     .grid-layout {
         @include flexbox-between;
+        max-width: 90vw;
 
-        @include responsive-tablet {
-            @include flexbox-center;
 
-            margin-top: 65vh;
-        }
 
         .skills-title {
             margin: 15vh;
@@ -19,17 +16,26 @@
             }
 
             h3 {
+                position: relative;
                 text-transform: uppercase;
                 width: 600px;
                 height: 150px;
-                position: relative;
                 top: 60px;
                 color: white;
 
                 font: {
                     size: 1.2rem;
                 }
+
             }
+
+            @include responsive-tablet {
+                .text-skills {
+                    display: none;
+                }
+            }
+
+
         }
 
         #skills {
@@ -58,6 +64,13 @@
                     height: 100px;
                 }
             }
+        }
+
+
+        @include responsive-tablet {
+            @include flexbox-center;
+
+            margin-top: 25px;
         }
     }
 }

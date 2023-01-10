@@ -1,71 +1,79 @@
 #s-about {
-    @include spacing-section; 
+    @include spacing-section;
     @include flexbox-center;
-    min-height: 90vh;
+    margin-top: 20vh;
+    height: 700px;
 
     .grid-layout {
-        #about {
+        @include flexbox-between;
+        max-width: 90vw;
+
+        @include responsive-tablet {
             @include flexbox-between; 
-            max-width: 90vw;
+            flex-direction: column;
+        }
+
+
+
+
+        article {
+            @include flexbox-center;
+
             
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            
+           
+            
+
+            svg {
+                position: absolute; 
+                background-size: cover;
+                width: 600px;
+            }
+
+            .blob-img {
+               position: relative; 
+               background-size: cover;
+               border-radius: 10px;
+               top: 20; 
+               bottom: 0;
+                              
+            } 
+
+
+        }
+
+        #about-text {
+            @include flexbox-center; 
+            max-width: 600px;
+            height: 25vh;
+            margin-left: 13vw;
+
+
+            h2 {
+                @include title;
+            }
+
+            p {
+                color: white;
+                text-align: center;
+                margin-top: 60px;
+
+                font: {
+                    size: 1.5rem;
+                }
+            }
+
+
             @include responsive-tablet {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
+                margin-top: 100px;
+                margin-left: 0;
             }
-
-
-            section {
-                width: 500px;
-                height: 500px;
-
-                .blob {
-                   svg {
-                    width: 700px;
-                    right: 124px;
-                    position: relative;
-
-                    
-                   }
-                }
-
-                .blob-img {
-                    bottom: 280px;
-                    left: 200px;
-                    position: relative;
-                    @include responsive-tablet {
-                        left: 151px;
-                    }
-
-
-                    img {
-                        border-radius: 10px;
-                    }
-
-                }
-
-
-            }
-
-            #about-text {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap; 
-               
-                height: 25vh;
-                max-width: 600px;
-                
-                h2{@include title;}
-                p {
-                    color: white; 
-                    text-align: center;
-                    margin-top: 60px;
-                    font: {
-                        size: 1.7rem; 
-                    }
-                }
-            }
-        } 
+        }
     }
+
 }

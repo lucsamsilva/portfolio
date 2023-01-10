@@ -1,184 +1,183 @@
 #s-home {
-    padding: 0px 50px;
-    position: relative; 
+    @include spacing-section;
+    height: 60vh;
+    margin-top: 15vh;
+
 }
 
 .grid-layout {
-
-    #home {
-        display: flex;
-        align-items: center;
-        min-height: 90vh;
-        padding: 150px 0px;
-        overflow: hidden;
+    @include flexbox-center;
+    flex-wrap: nowrap; 
+  
+    #header-text {
         width: 100%;
+        flex-direction: column;
 
-        #header-text {
-            width: 100%;
+        @include responsive-tablet {
+            display: flex;
             flex-direction: column;
-            @include responsive-tablet {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                text-align: center;
-                padding: 0px;
-            }
-
-            .home-text {
-                color: #fff;
-                font-size: 2rem;
-                max-width: 600px;
-                margin: 40px 0px;
-                font-weight: 400;
-                line-height: 140%;
-    
-                span { 
-                    color: $text-prymary-color; 
-                }
-            }
-
-            .home-text-type {
-                color: $text-prymary-color; 
-                font-size: 1.7rem;
-                max-width: 600px;
-                margin: 40px 0px;
-                font-weight: 400;
-                line-height: 140%;
-
-                
-            }
-
-            .typewrite {
-                &:after {
-                    @include piscar
-                }
-            }
-
-
-            
-            a {
-                color: white;
-                background:  #0A0016;
-                padding: 20px 32px;
-                max-width: 250px;
-                text-transform: uppercase;
-                backdrop-filter: blur(10px);
-                border: 2px solid #C24DDF;
-                border-radius: .2em;
-
-                
-                @include flexbox-center;
-                position: relative;
-
-                transition: all 0.4s ease;
-                margin-top: 30px;
-                font: {
-                    size: 18px;
-                    weight: 700;
-                }
-
-                &:hover {
-                    color: white;
-                    background-color: #a202ca;
-                    letter-spacing: 0.15em;
-                    box-shadow: 0 0 15px #a202ca;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        inset: 2px;
-                       
-                        background: #C24DDF;
-                        
-                    }
-
-                }
-
-                span {
-                    position: relative;
-                    z-index: 1;
-                }
-
-            }
-          
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            padding: 0px;
         }
 
-        
-        #home-photo {
+        .home-text {
+            color: #fff;
+            font-size: 2rem;
+            max-width: 600px;
+            margin: 40px 0px;
+            font-weight: 400;
+            line-height: 140%;
+
+            span {
+                color: $text-prymary-color;
+            }
+        }
+
+        .home-text-type {
+            color: $text-prymary-color;
+            font-size: 1.7rem;
+            max-width: 600px;
+            margin: 40px 0px;
+            font-weight: 400;
+            line-height: 140%;
+
+
+        }
+
+        .typewrite {
+            &:after {
+                @include piscar
+            }
+        }
+
+
+
+        a {
+            color: white;
+            background: #0A0016;
+            padding: 20px 32px;
+            max-width: 250px;
+            text-transform: uppercase;
+            backdrop-filter: blur(10px);
+            border: 2px solid #C24DDF;
+            border-radius: .2em;
+
+
+            @include flexbox-center;
             position: relative;
-            right: 25px;
-            @include responsive-tablet {
-                display: none;
+
+            transition: all 0.4s ease;
+            margin-top: 30px;
+
+            font: {
+                size: 18px;
+                weight: 700;
             }
 
-            #home-icon {
-                display: flex;
-                position: absolute;
-                top: 52px; 
-                left: -30px;
-                 
-                
-                div {
-                    position: relative;
-                    padding: 10px 15px;
-                    margin: 5px;
-                    border-radius: 5px;
+            &:hover {
+                color: white;
+                background-color: #a202ca;
+                letter-spacing: 0.15em;
+                box-shadow: 0 0 15px #a202ca;
 
-                    font: {
-                        size: 1.3rem;
-                        weight: bold;
-                    }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 2px;
 
-                    animation: move 10s ease-in infinite;
-                    animation-delay: -1s;
+                    background: #C24DDF;
 
                 }
 
-                @keyframes move {
-
-                    0% {
-                        transform: translate(10px);
-                        
-                    }
-
-                    50% {
-                        transform: translateX(30px);
-                    }
-                    
-                    100% {
-                        transform: translate(10px);
-                    }
-                    
-                    
-                }
-
-                .icon-1 {
-                    top: 20px; 
-                    right: 25px;
-                    background-color: #FF5C00;
-                   
-                }
-
-                .icon-2 {
-                    top: -70px;
-                    right: 10px;
-                    background-color: #2400FF;
-                }
-
-                .icon-3 {
-                    background-color: #FAFF00;
-                }
-                
             }
-    
+
+            span {
+                position: relative;
+                z-index: 1;
+            }
+
         }
-
-        
-
-
-
 
     }
+
+
+    #home-photo {
+        position: relative;
+        right: 25px;
+
+        @include responsive-tablet {
+            display: none;
+        }
+
+        #home-icon {
+            display: flex;
+            position: absolute;
+            top: 52px;
+            left: -30px;
+
+
+            div {
+                position: relative;
+                padding: 10px 15px;
+                margin: 5px;
+                border-radius: 5px;
+
+                font: {
+                    size: 1.3rem;
+                    weight: bold;
+                }
+
+                animation: move 10s ease-in infinite;
+                animation-delay: -1s;
+
+            }
+
+            @keyframes move {
+
+                0% {
+                    transform: translate(10px);
+
+                }
+
+                50% {
+                    transform: translateX(30px);
+                }
+
+                100% {
+                    transform: translate(10px);
+                }
+
+
+            }
+
+            .icon-1 {
+                top: 20px;
+                right: 25px;
+                background-color: #FF5C00;
+
+            }
+
+            .icon-2 {
+                top: -70px;
+                right: 10px;
+                background-color: #2400FF;
+            }
+
+            .icon-3 {
+                background-color: #FAFF00;
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+
 
 }
