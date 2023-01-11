@@ -2,9 +2,10 @@
   💻<br>Lucsa | Portifolio
 </h1>
 
-![Resultado final do projeto](assets/image/preview.png)
-
 <h4 align="center"><a href="https://lucsa.netlify.app/">visitar o projeto</a></h4>
+
+
+---
 
 ## 📚 Seções
 
